@@ -1,3 +1,5 @@
+using System;
+
 public class PagedResponse<T> : Response<T>
 {
     public int PageNumber { get; set; }

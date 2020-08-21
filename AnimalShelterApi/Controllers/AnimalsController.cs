@@ -18,6 +18,19 @@ namespace AnimalShelterApi.Controllers
     {
       _db = db;
     }
+
+    [HttpGet]
+    public async Task<IActionResult> GetPages([FromQuery] PaginationFilter filter)
+    {
+      var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize); //probably want to use a mapper here.
+      var pagedData = await _db.Animals
+        .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
+        .Take(validFilter.PageSize)
+        .ToListAsync();
+      var response = await _db.Animals.ToListAsync();
+      return Ok(response);
+    }
+
     // GET api/animals "read"
     [HttpGet]
     public ActionResult<IEnumerable<Animal>> Get(string name, string species)
