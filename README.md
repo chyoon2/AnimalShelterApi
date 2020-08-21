@@ -70,6 +70,8 @@ _This is an API that lists the types of animals at a shelter._
 
 
 ![Route Configuration](AnimalShelterApi/wwwroot/swaggerimage.PNG)
+
+![alt text](https://github.com/chyoon2/animalshelterapi/blob/media/swig.png?raw=true)
 ---
 ---
 
