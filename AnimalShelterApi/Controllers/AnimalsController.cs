@@ -5,6 +5,7 @@ using AnimalShelterApi.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
+using PaginationRequirements;
 
 namespace AnimalShelterApi.Controllers
 {
@@ -13,22 +14,25 @@ namespace AnimalShelterApi.Controllers
   public class AnimalsController : ControllerBase
   {
     private AnimalShelterApiContext _db;
-
-    public AnimalsController(AnimalShelterApiContext db)
+    
+    public AnimalsController( AnimalShelterApiContext db, IUriService uriService)
     {
       _db = db;
+      this.uriService = uriService;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetPages([FromQuery] PaginationFilter filter)
     {
+      var route = Request.Path.Value;
       var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize); //probably want to use a mapper here.
       var pagedData = await _db.Animals
         .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
         .Take(validFilter.PageSize)
         .ToListAsync();
       var response = await _db.Animals.ToListAsync();
-      return Ok(response);
+      var pagedReponse = PaginationHelper.CreatePagedReponse<Animal>(pagedData, validFilter, totalRecords, uriService, route);
+    return Ok(pagedResponse);
     }
 
     // GET api/animals "read"
