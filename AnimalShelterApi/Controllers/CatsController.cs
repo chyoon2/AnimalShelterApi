@@ -11,12 +11,12 @@ namespace AnimalShelterApi.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class AnimalsController : ControllerBase
+  public class CatsController : ControllerBase
   {
     private AnimalShelterApiContext _db;
     private readonly IUriService uriService;
     
-    public AnimalsController( AnimalShelterApiContext db, IUriService uriService)
+    public CatsController( AnimalShelterApiContext db, IUriService uriService)
     {
       _db = db;
       this.uriService = uriService;
@@ -27,20 +27,20 @@ namespace AnimalShelterApi.Controllers
     {
       var route = Request.Path.Value;
       var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize); //probably want to use a mapper here.
-      var pagedData = await _db.Animals
+      var pagedData = await _db.Cats
         .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
         .Take(validFilter.PageSize)
         .ToListAsync();
-        var totalRecords = await _db.Animals.CountAsync();      
-        var pagedReponse = PaginationHelper.CreatePagedReponse<Animal>(pagedData, validFilter, totalRecords, uriService, route);
+        var totalRecords = await _db.Cats.CountAsync();      
+        var pagedReponse = PaginationHelper.CreatePagedReponse<Cat>(pagedData, validFilter, totalRecords, uriService, route);
         return Ok(pagedReponse);
     }
 
-    // GET api/animals "read"
+    // GET api/cats "read"
     [HttpGet]
-    public ActionResult<IEnumerable<Animal>> Get(string name, string species)
+    public ActionResult<IEnumerable<Cat>> Get(string name, string species)
     {
-      var query = _db.Animals.AsQueryable();
+      var query = _db.Cats.AsQueryable();
       if(name != null)
       {
         query = query.Where(x => x.Name == name);
@@ -51,36 +51,35 @@ namespace AnimalShelterApi.Controllers
       }
       return query.ToList();
     }
-    // POST api/animals "create"
+    // POST api/cats "create"
     [HttpPost]
-    public void Post([FromBody] Animal animal)
+    public void Post([FromBody] Cat cat)
     {
-      _db.Animals.Add(animal);
+      _db.Cats.Add(cat);
       _db.SaveChanges();
     }
-    //api/animals/1  
+    //api/cats/1  
     [HttpGet("{id}")]
-    // public ActionResult<Animal> Get(int id)
+    // public ActionResult<Cat> Get(int id)
     public async Task<IActionResult> Get(int id)
     {
-        // return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
-        var animal = await _db.Animals.Where(a => a.AnimalId == id).FirstOrDefaultAsync();
-        return Ok(new Response<Animal>(animal)); // return wrapper class with data
+        var cat = await _db.Cats.Where(a => a.CatId == id).FirstOrDefaultAsync();
+        return Ok(new Response<Cat>(cat)); 
     }
-    //PUT api/animals/5 "edit/update"
+    //PUT api/cats/5 "edit/update"
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] Animal animal)
+    public void Put(int id, [FromBody] Cat cat)
     {
-      animal.AnimalId = id;
-      _db.Entry(animal).State = EntityState.Modified;
+      cat.CatId = id;
+      _db.Entry(cat).State = EntityState.Modified;
       _db.SaveChanges();
     }
-    //DELETE api/animals/5  "delete"
+    //DELETE api/cats/5  "delete"
     [HttpDelete("{id}")]
     public void Delete(int id)
     {
-      var animalToDelete = _db.Animals.FirstOrDefault(entry =>entry.AnimalId == id);
-      _db.Animals.Remove(animalToDelete);
+      var catToDelete = _db.Cats.FirstOrDefault(entry =>entry.CatId == id);
+      _db.Cats.Remove(catToDelete);
       _db.SaveChanges();
     }
   }
