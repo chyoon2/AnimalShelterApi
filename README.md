@@ -25,8 +25,13 @@ _This is an API that lists the types of animals at a shelter._
 | The API takes queries of Name & Species | "http://localhost:5000/api/animals?name=Rex" | { "animalId": 13, "name": "Rex","species": "Dog"} |
 | The API is searchable by Page Number  | "http://localhost:5000/api/animals/pages?pageNumber=2&pageSize=10" | N/A |
 
+
+![Route Configuration](AnimalShelterApi/wwwroot/img/swaggerimage.PNG)
+
 ---
 ---
+
+
 ## Setup/Installation Requirements
 
 #### Open via Bash/GitBash:
