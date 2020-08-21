@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using AnimalShelterApi.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Threading.Tasks;
 
 namespace AnimalShelterApi.Controllers
 {
@@ -39,11 +40,14 @@ namespace AnimalShelterApi.Controllers
       _db.Animals.Add(animal);
       _db.SaveChanges();
     }
-    //api/animals/1  "details"
+    //api/animals/1  
     [HttpGet("{id}")]
-    public ActionResult<Animal> Get(int id)
+    // public ActionResult<Animal> Get(int id)
+    public async Task<IActionResult> Get(int id)
     {
-        return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
+        // return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
+        var animal = await _db.Animals.Where(a => a.AnimalId == id).FirstOrDefaultAsync();
+        return Ok(new Response<Animal>(animal)); // return wrapper class with data
     }
     //PUT api/animals/5 "edit/update"
     [HttpPut("{id}")]
