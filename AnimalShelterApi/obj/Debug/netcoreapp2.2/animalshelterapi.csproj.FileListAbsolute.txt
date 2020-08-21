@@ -1,0 +1,14 @@
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\bin\Debug\netcoreapp2.2\animalshelterapi.deps.json
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\bin\Debug\netcoreapp2.2\animalshelterapi.runtimeconfig.json
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\bin\Debug\netcoreapp2.2\animalshelterapi.runtimeconfig.dev.json
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\bin\Debug\netcoreapp2.2\animalshelterapi.dll
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\bin\Debug\netcoreapp2.2\animalshelterapi.pdb
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.csprojAssemblyReference.cache
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.csproj.CoreCompileInputs.cache
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.RazorAssemblyInfo.cache
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.RazorAssemblyInfo.cs
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.AssemblyInfoInputs.cache
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.AssemblyInfo.cs
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.RazorTargetAssemblyInfo.cache
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.dll
+C:\Users\14252\Desktop\animalshelterapi.solution\animalshelterapi\obj\Debug\netcoreapp2.2\animalshelterapi.pdb
