@@ -30,6 +30,12 @@ namespace AnimalShelterApi.Models
       new Dog { DogId = 12, Name = "Bartholomew", Species = "Dinosaur", Age = 22, Gender = "Male", Breed = "Alpine", DateOfAdmittance = DateTime.Now, Url = "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/07/1024/512/iStock-466395505.jpg?ve=1&tl=1" },
       new Dog { DogId = 13, Name = "Bartholomew", Species = "Dinosaur", Age = 22, Gender = "Male", Breed = "Alpine", DateOfAdmittance = DateTime.Now, Url = "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/07/1024/512/iStock-466395505.jpg?ve=1&tl=1" }
       );
+
+      builder.Entity<Cat>()
+      .HasData(
+      new Cat { CatId = 1, Name = "Catname", Species = "Woolly Mammoth", Age = 7, Gender = "Female", Breed = "Alpine", DateOfAdmittance =DateTime.Now, Url = "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/07/1024/512/iStock-466395505.jpg?ve=1&tl=1"},
+      new Cat { CatId = 2, Name = "Cat3name", Species = "Woolly Mammoth", Age = 7, Gender = "Female", Breed = "Alpine", DateOfAdmittance =DateTime.Now, Url = "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/07/1024/512/iStock-466395505.jpg?ve=1&tl=1"}
+      );
     }
   }
 }

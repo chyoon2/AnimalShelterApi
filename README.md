@@ -18,12 +18,12 @@ _This is an API that lists the types of animals at a shelter. The Api Utilizes P
 
 | Spec| Example Request | Example Output
 | ----------- | ----------- | ----------- |
-| The API GET retrieves entire list| "http://localhost:5000/api/animals" |  { "animalId": 15, "name": "Bartholsssomew","species": "Dinosaur"} |
-| The API PUT edits listings| "http://localhost:5000/api/animals/{id}" | N/A |
-| The API POST adds listings| "http://localhost:5000/api/animals" | N/A |
-| The API DELETE delete listings | "http://localhost:5000/api/animals/{id}" | N/A |
-| The API takes queries of Name & Species | "http://localhost:5000/api/animals?name=Rex" | { "animalId": 13, "name": "Rex","species": "Dog"} |
-| The API is searchable by Page Number  | "http://localhost:5000/api/animals/pages?pageNumber=2&pageSize=10" | N/A |
+| The API GET retrieves entire list of Cats or Dogs| "http://localhost:5000/api/dogs" |  { "animalId": 15, "name": "Bartholsssomew","species": "Dinosaur"} |
+| The API PUT edits listings| "http://localhost:5000/api/dogs/{id}" | N/A |
+| The API POST adds listings| "http://localhost:5000/api/dogs" | N/A |
+| The API DELETE delete listings | "http://localhost:5000/api/cats/{id}" | N/A |
+| The API takes queries of Name & Species | "http://localhost:5000/api/cats?name=Rex" | { "animalId": 13, "name": "Rex","species": "cat"} |
+| The API is searchable by Page Number  | "http://localhost:5000/api/cats/pages?pageNumber=2&pageSize=10" | N/A |
 
 
 

@@ -3,14 +3,16 @@ using System;
 using AnimalShelterApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace animalshelterapi.Migrations
 {
     [DbContext(typeof(AnimalShelterApiContext))]
-    partial class AnimalShelterApiContextModelSnapshot : ModelSnapshot
+    [Migration("20200821231028_newdogcat")]
+    partial class newdogcat
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,30 +41,6 @@ namespace animalshelterapi.Migrations
                     b.HasKey("CatId");
 
                     b.ToTable("Cats");
-
-                    b.HasData(
-                        new
-                        {
-                            CatId = 1,
-                            Age = 7,
-                            Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(4993),
-                            Gender = "Female",
-                            Name = "Catname",
-                            Species = "Woolly Mammoth",
-                            Url = "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/07/1024/512/iStock-466395505.jpg?ve=1&tl=1"
-                        },
-                        new
-                        {
-                            CatId = 2,
-                            Age = 7,
-                            Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(5488),
-                            Gender = "Female",
-                            Name = "Cat3name",
-                            Species = "Woolly Mammoth",
-                            Url = "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/07/1024/512/iStock-466395505.jpg?ve=1&tl=1"
-                        });
                 });
 
             modelBuilder.Entity("AnimalShelterApi.Models.Dog", b =>
@@ -94,7 +72,7 @@ namespace animalshelterapi.Migrations
                             DogId = 1,
                             Age = 7,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 33, DateTimeKind.Local).AddTicks(4920),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 107, DateTimeKind.Local).AddTicks(8109),
                             Gender = "Female",
                             Name = "Matilda",
                             Species = "Woolly Mammoth",
@@ -105,7 +83,7 @@ namespace animalshelterapi.Migrations
                             DogId = 2,
                             Age = 10,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1697),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4902),
                             Gender = "Female",
                             Name = "Rexie",
                             Species = "Dinosaur",
@@ -116,7 +94,7 @@ namespace animalshelterapi.Migrations
                             DogId = 3,
                             Age = 2,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1712),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4918),
                             Gender = "Female",
                             Name = "Matilda",
                             Species = "Dinosaur",
@@ -127,7 +105,7 @@ namespace animalshelterapi.Migrations
                             DogId = 4,
                             Age = 4,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1716),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4921),
                             Gender = "Male",
                             Name = "Pip",
                             Species = "Shark",
@@ -138,7 +116,7 @@ namespace animalshelterapi.Migrations
                             DogId = 5,
                             Age = 22,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1719),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4924),
                             Gender = "Male",
                             Name = "Bartholomew",
                             Species = "Dinosaur",
@@ -149,7 +127,7 @@ namespace animalshelterapi.Migrations
                             DogId = 6,
                             Age = 22,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1722),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4927),
                             Gender = "Male",
                             Name = "Bartholomew",
                             Species = "Dinosaur",
@@ -160,7 +138,7 @@ namespace animalshelterapi.Migrations
                             DogId = 7,
                             Age = 22,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1725),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4930),
                             Gender = "Male",
                             Name = "Bartholomew",
                             Species = "Dinosaur",
@@ -171,7 +149,7 @@ namespace animalshelterapi.Migrations
                             DogId = 8,
                             Age = 22,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1728),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4933),
                             Gender = "Male",
                             Name = "Bartholomew",
                             Species = "Dinosaur",
@@ -182,7 +160,7 @@ namespace animalshelterapi.Migrations
                             DogId = 9,
                             Age = 22,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1731),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4936),
                             Gender = "Male",
                             Name = "Bartholomew",
                             Species = "Dinosaur",
@@ -193,7 +171,7 @@ namespace animalshelterapi.Migrations
                             DogId = 10,
                             Age = 22,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1734),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4939),
                             Gender = "Male",
                             Name = "Bartholomew",
                             Species = "Dinosaur",
@@ -204,7 +182,7 @@ namespace animalshelterapi.Migrations
                             DogId = 11,
                             Age = 22,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1736),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4942),
                             Gender = "Male",
                             Name = "Bartholomew",
                             Species = "Dinosaur",
@@ -215,7 +193,7 @@ namespace animalshelterapi.Migrations
                             DogId = 12,
                             Age = 22,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1739),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4945),
                             Gender = "Male",
                             Name = "Bartholomew",
                             Species = "Dinosaur",
@@ -226,7 +204,7 @@ namespace animalshelterapi.Migrations
                             DogId = 13,
                             Age = 22,
                             Breed = "Alpine",
-                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 13, 3, 35, DateTimeKind.Local).AddTicks(1742),
+                            DateOfAdmittance = new DateTime(2020, 8, 21, 16, 10, 28, 109, DateTimeKind.Local).AddTicks(4948),
                             Gender = "Male",
                             Name = "Bartholomew",
                             Species = "Dinosaur",
