@@ -4,6 +4,7 @@
 ##### __Created:__ 8/21/2020
 ##### __Last Updated:__ 8/21/2020 
 ##### By _**Chris Yoon**_  
+
 ---
 ---
 
@@ -25,9 +26,6 @@ _This is an API that lists the types of animals at a shelter. The Api Utilizes P
 | The API takes queries of Name & Species | "http://localhost:5000/api/cats?name=Rex" | { "animalId": 13, "name": "Rex","species": "cat"} |
 | The API is searchable by Page Number  | "http://localhost:5000/api/cats/pages?pageNumber=2&pageSize=10" | N/A |
 
-
-
-
 ---
 ---
 
@@ -41,7 +39,7 @@ _This is an API that lists the types of animals at a shelter. The Api Utilizes P
 3. Open the project
     "code ."
 
-#### Configue Appsettings.json Database:
+#### Configure Appsettings.json Database:
 1. Create an 'appsettings.json' file in your root folder.
 2. Add the following code
 ```
@@ -66,7 +64,7 @@ _This is an API that lists the types of animals at a shelter. The Api Utilizes P
 
 ##### Download Postman:
 1. Download and Install the Postman application https://www.postman.com/downloads/
-2. Host the server and use Postman to make your HttpRequests.
+2. Host the server and use Postman to make your HttpRequests. Follow the route addresses demonstrated in Swagger.
 
 ## Route Display Courtesy of Swagger
 1) After launching the server you can view this route tree ![here](http://localhost:5000/swagger/index.html#/)
