@@ -19,9 +19,18 @@ namespace AnimalShelterApi.Controllers
     }
     // GET api/animals "read"
     [HttpGet]
-    public ActionResult<IEnumerable<Animal>> Get()
+    public ActionResult<IEnumerable<Animal>> Get(string name, string species)
     {
-      return _db.Animals.ToList();
+      var query = _db.Animals.AsQueryable();
+      if(name != null)
+      {
+        query = query.Where(x => x.Name == name);
+      }
+      if(species != null)
+      {
+        query = query.Where(x => x.Species == species);
+      }
+      return query.ToList();
     }
     // POST api/animals "create"
     [HttpPost]
