@@ -26,7 +26,7 @@ _This is an API that lists the types of animals at a shelter._
 | The API is searchable by Page Number  | "http://localhost:5000/api/animals/pages?pageNumber=2&pageSize=10" | N/A |
 
 
-![Route Configuration](AnimalShelterApi/wwwroot/swaggerimage.PNG)
+
 
 ---
 ---
@@ -68,6 +68,8 @@ _This is an API that lists the types of animals at a shelter._
 1. Download and Install the Postman application https://www.postman.com/downloads/
 2. Host the server and use Postman to make your HttpRequests.
 
+
+![Route Configuration](AnimalShelterApi/wwwroot/swaggerimage.PNG)
 ---
 ---
 
