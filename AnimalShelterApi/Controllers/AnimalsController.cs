@@ -14,6 +14,7 @@ namespace AnimalShelterApi.Controllers
   public class AnimalsController : ControllerBase
   {
     private AnimalShelterApiContext _db;
+    private readonly IUriService uriService;
     
     public AnimalsController( AnimalShelterApiContext db, IUriService uriService)
     {
@@ -21,7 +22,7 @@ namespace AnimalShelterApi.Controllers
       this.uriService = uriService;
     }
 
-    [HttpGet]
+    [HttpGet("pages")]
     public async Task<IActionResult> GetPages([FromQuery] PaginationFilter filter)
     {
       var route = Request.Path.Value;
@@ -30,9 +31,9 @@ namespace AnimalShelterApi.Controllers
         .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
         .Take(validFilter.PageSize)
         .ToListAsync();
-      var response = await _db.Animals.ToListAsync();
-      var pagedReponse = PaginationHelper.CreatePagedReponse<Animal>(pagedData, validFilter, totalRecords, uriService, route);
-    return Ok(pagedResponse);
+        var totalRecords = await _db.Animals.CountAsync();      
+        var pagedReponse = PaginationHelper.CreatePagedReponse<Animal>(pagedData, validFilter, totalRecords, uriService, route);
+        return Ok(pagedReponse);
     }
 
     // GET api/animals "read"
