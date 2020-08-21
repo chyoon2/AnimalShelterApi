@@ -36,7 +36,6 @@ namespace AnimalShelterApi.Controllers
         return Ok(pagedReponse);
     }
 
-    // GET api/cats "read"
     [HttpGet]
     public ActionResult<IEnumerable<Cat>> Get(string name, string species)
     {
@@ -51,7 +50,7 @@ namespace AnimalShelterApi.Controllers
       }
       return query.ToList();
     }
-    // POST api/cats "create"
+    
     [HttpPost]
     public void Post([FromBody] Cat cat)
     {
@@ -60,13 +59,12 @@ namespace AnimalShelterApi.Controllers
     }
     //api/cats/1  
     [HttpGet("{id}")]
-    // public ActionResult<Cat> Get(int id)
     public async Task<IActionResult> Get(int id)
     {
         var cat = await _db.Cats.Where(a => a.CatId == id).FirstOrDefaultAsync();
         return Ok(new Response<Cat>(cat)); 
     }
-    //PUT api/cats/5 "edit/update"
+    
     [HttpPut("{id}")]
     public void Put(int id, [FromBody] Cat cat)
     {
@@ -74,7 +72,6 @@ namespace AnimalShelterApi.Controllers
       _db.Entry(cat).State = EntityState.Modified;
       _db.SaveChanges();
     }
-    //DELETE api/cats/5  "delete"
     [HttpDelete("{id}")]
     public void Delete(int id)
     {
