@@ -68,10 +68,15 @@ _This is an API that lists the types of animals at a shelter. The Api Utilizes P
 1. Download and Install the Postman application https://www.postman.com/downloads/
 2. Host the server and use Postman to make your HttpRequests.
 
-
+## Route Display Courtesy of Swagger
+1) After launching the server you can view this route tree ![here](http://localhost:5000/swagger/index.html#/)
 ![Route tree courtesy of Swagger](https://github.com/chyoon2/animalshelterapi/blob/media/catdog.png?raw=true)
 
-![Route tree courtesy of Swagger](https://github.com/chyoon2/animalshelterapi/blob/media/postmanpages.png?raw=true)
+## Query by Pagination
+1) To search by page query the route "http://localhost:5000/api/cats/pagespageNumber={EnterPageNumber}&pageSize=10"
+
+2) Or enter the page number as a parameter as shown in the image below.
+![Postman Pagination](https://github.com/chyoon2/animalshelterapi/blob/media/postmanpages.png?raw=true)
 
 ---
 ---
