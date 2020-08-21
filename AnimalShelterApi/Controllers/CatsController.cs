@@ -26,7 +26,7 @@ namespace AnimalShelterApi.Controllers
     public async Task<IActionResult> GetPages([FromQuery] PaginationFilter filter)
     {
       var route = Request.Path.Value;
-      var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize); //probably want to use a mapper here.
+      var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize); 
       var pagedData = await _db.Cats
         .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
         .Take(validFilter.PageSize)
