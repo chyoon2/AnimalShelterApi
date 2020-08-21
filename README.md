@@ -69,7 +69,10 @@ _This is an API that lists the types of animals at a shelter. The Api Utilizes P
 2. Host the server and use Postman to make your HttpRequests.
 
 
-![Route tree courtesy of Swagger](https://github.com/chyoon2/animalshelterapi/blob/media/swig.png?raw=true)
+![Route tree courtesy of Swagger](https://github.com/chyoon2/animalshelterapi/blob/media/catdog.png?raw=true)
+
+![Route tree courtesy of Swagger](https://github.com/chyoon2/animalshelterapi/blob/media/postmanpages.png?raw=true)
+
 ---
 ---
 
