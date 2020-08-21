@@ -26,11 +26,10 @@ _This is an API that lists the types of animals at a shelter._
 | The API is searchable by Page Number  | "http://localhost:5000/api/animals/pages?pageNumber=2&pageSize=10" | N/A |
 
 
-![Route Configuration](AnimalShelterApi/wwwroot/img/swaggerimage.PNG)
+![Route Configuration](AnimalShelterApi/wwwroot/swaggerimage.PNG)
 
 ---
 ---
-
 
 ## Setup/Installation Requirements
 
